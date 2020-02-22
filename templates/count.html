@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Mini_web</title>
+        <style>
+            h1 {
+                background: #99ff00fb;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Your text has {{ count }} words</h1>
+
+        <a href="{% url 'home' %}">Count Again</a>
+
+        <h1>Your Text is:</h1>
+        {{fulltext}}
+        <br>
+        {% for letter,total in sorted_word %}
+            <br>
+            {{letter}} : {{total}}
+            <br> 
+        {% endfor %}
+    </body>
+</html>
